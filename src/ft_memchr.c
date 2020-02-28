@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 17:57:29 by daelee            #+#    #+#             */
-/*   Updated: 2020/02/28 12:15:29 by daelee           ###   ########.fr       */
+/*   Created: 2020/02/28 13:36:53 by daelee            #+#    #+#             */
+/*   Updated: 2020/02/28 18:46:39 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void        *ft_memset(void *dest, int c, size_t n)
+void    *ft_memchr(const void *b, int c, size_t n)
 {
-    unsigned char   *new_dest;
-    unsigned char   src;
-    size_t  i;
+    unsigned char *new_b;
+    unsigned char find;
 
-    new_dest = dest;
-    src = c;
-    i = 0;
-    while(i++ < n)
-        *new_dest++ = src;
-    return (dest);
+    new_b = (unsigned char *)b;
+    find = c;
+    while (n--)
+    {
+        if (*new_b++ == find)
+            return ((new_b - 1));
+    }
+    return (0);
 }
 
-int main()
+int     main(void)
 {
-    char str[30] = "hi my name is daelee.";
-    //int arr[10];
-    ft_memset(str, '=', sizeof(str));
-    puts(str);
-    //printf("%d\n", arr[0]);
+    char str1[16] = "abcdefghiGlmnop";
+    char str2[16] = "abcdefghiGlmnop";
+    printf("real...%s\n", memchr(str1, 0, 16));
+    printf("myft...%s\n", ft_memchr(str2, 0, 16));
     return (0);
 }
