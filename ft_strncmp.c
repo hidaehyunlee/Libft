@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/28 17:45:56 by daelee            #+#    #+#             */
-/*   Updated: 2020/02/29 11:02:44 by daelee           ###   ########.fr       */
+/*   Created: 2020/02/29 10:59:12 by daelee            #+#    #+#             */
+/*   Updated: 2020/02/29 11:15:58 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_memcmp(const void *b1, const void *b2, size_t n)
+int     ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    unsigned char *s1;
-    unsigned char *s2;
     size_t i;
 
     if (n == 0)
         return (0);
-    s1 = (unsigned char *)b1;
-    s2 = (unsigned char *)b2;
     i = 0;
-    while (n--)
+    while ((s1[i] != '\0') && (s2[i] != '\0') && i < (n - 1))
     {
+        printf("%ld...%ld\n", n, i);
         if (s1[i] != s2[i])
             break ; 
         i++;
@@ -34,9 +31,9 @@ int     ft_memcmp(const void *b1, const void *b2, size_t n)
 
 int     main()
 {
-    char str1[] = "029351";
-    char str2[] = "129651";
-    printf("real...%d\n", memcmp(str1, str2, 0));
-    printf("myft...%d\n", ft_memcmp(str1, str2, 0));
+    char str1[] = "abcdaaa";
+    char str2[] = "abcdaazz";
+    printf("real...%d\n", strncmp(str1, str2, 6));
+    printf("myft...%d\n", ft_strncmp(str1, str2, 6));
     return 0;
 }

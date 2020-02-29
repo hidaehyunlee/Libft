@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 13:36:53 by daelee            #+#    #+#             */
-/*   Updated: 2020/02/28 18:46:39 by daelee           ###   ########.fr       */
+/*   Updated: 2020/02/29 11:04:41 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int     main(void)
 {
     char str1[16] = "abcdefghiGlmnop";
     char str2[16] = "abcdefghiGlmnop";
-    printf("real...%s\n", memchr(str1, 0, 16));
-    printf("myft...%s\n", ft_memchr(str2, 0, 16));
+    printf("real...%s\n", memchr(str1, 0, 0));
+    printf("myft...%s\n", ft_memchr(str2, 0, 0));
     return (0);
 }
