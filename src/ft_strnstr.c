@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 23:05:09 by daelee            #+#    #+#             */
-/*   Updated: 2020/02/29 00:50:20 by daelee           ###   ########.fr       */
+/*   Updated: 2020/02/29 10:49:06 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,12 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
     size_t l_len;
 
+    if (*little == '\0')
+        return ((char *)big);
     l_len = my_strlen(little);
     while (len--)
     {
-        if (my_memcmp(big, little, l_len) == 0)
+        if (my_memcmp(big, little, (l_len - 1)) == 0)
             return ((char *)big);
         big++;
     }
@@ -56,10 +58,11 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
 
 int main()
 {
-	char s1[] = "abcde";
+	char s1[] = "abcd123456";
+    char s2[30] = "1";
 	char *ptr;
 
-    ptr = ft_strnstr(s1, "cde", 10);
-	printf("%s\n", ptr);
+    ptr = ft_strnstr(s1, s2, 5);
+	printf("ft:%s\n", ptr);
 	return 0;
 }
