@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 17:19:20 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/01 19:28:12 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/01 22:00:31 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ int	    ft_isascii(int c);
 int	    ft_isprint(int c);
 int	    ft_toupper(int c);
 int	    ft_tolower(int c);
+void    *ft_calloc(size_t nmemb, size_t size);
+char    *ft_strdup(const char *str);
 
 #endif
