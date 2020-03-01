@@ -6,39 +6,39 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 23:05:09 by daelee            #+#    #+#             */
-/*   Updated: 2020/02/29 10:49:06 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/01 13:52:26 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t      my_strlen(const char *s)
-{
-    size_t i;
+// size_t      ft_strlen(const char *s)
+// {
+//     size_t i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
-}
+//     i = 0;
+//     while (s[i])
+//         i++;
+//     return (i);
+// }
 
-int     my_memcmp(const void *b1, const void *b2, size_t n)
-{
-    unsigned char *s1;
-    unsigned char *s2;
-    size_t i;
+// int     ft_memcmp(const void *b1, const void *b2, size_t n)
+// {
+//     unsigned char *s1;
+//     unsigned char *s2;
+//     size_t i;
 
-    s1 = (unsigned char *)b1;
-    s2 = (unsigned char *)b2;
-    i = 0;
-    while (n--)
-    {
-        if (s1[i] != s2[i])
-            break ; 
-        i++;
-    }
-    return (s1[i] - s2[i]);
-}
+//     s1 = (unsigned char *)b1;
+//     s2 = (unsigned char *)b2;
+//     i = 0;
+//     while (n--)
+//     {
+//         if (s1[i] != s2[i])
+//             break ; 
+//         i++;
+//     }
+//     return (s1[i] - s2[i]);
+// }
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -46,10 +46,10 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
 
     if (*little == '\0')
         return ((char *)big);
-    l_len = my_strlen(little);
+    l_len = ft_strlen(little);
     while (len--)
     {
-        if (my_memcmp(big, little, (l_len - 1)) == 0)
+        if (ft_memcmp(big, little, (l_len - 1)) == 0)
             return ((char *)big);
         big++;
     }
