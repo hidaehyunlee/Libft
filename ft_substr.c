@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/01 21:41:43 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/02 14:20:27 by daelee           ###   ########.fr       */
+/*   Created: 2020/03/02 13:07:04 by daelee            #+#    #+#             */
+/*   Updated: 2020/03/02 14:39:24 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *str)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    int i;
-    int len;
-    char *new_str;
+    char *substr;
 
-    len = 0;
-    while (str[len])
-        len++;
-    new_str = (char *)malloc(sizeof(char) * (len + 1));
-    if (!(new_str))
+    if ((!s) || (ft_strlen(s) < start))
+		return (NULL);
+    if (!(substr = (char *)malloc(sizeof(char) * (len + 1))))
         return (NULL);
-    i = 0;
-    while (str[i])
-    {
-        new_str[i] = str[i];
-        i++;
-    }
-    new_str[i] = '\0';
-    return (new_str);
+    ft_strlcpy(substr, s+start, len+1);
+    return (substr);
 }
 
-int		main(void)
+int     main(void)
 {
-	char arr[] = "";
-
-	printf("%s\n", ft_strdup(arr));
-	return (0);
+    char s[] = "";
+    printf("%ld\n", ft_strlen(s));
+    printf("ft : %s\n", ft_substr(s, 7, 0));
+    return (0);
 }
