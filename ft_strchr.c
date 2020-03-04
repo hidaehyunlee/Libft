@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 22:01:07 by daelee            #+#    #+#             */
-/*   Updated: 2020/02/28 22:21:35 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/05 02:06:23 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,26 @@
 char    *ft_strchr(const char *s, int c)
 {
     char find;
+    int i;
 
     find = c;
-    while (*s++ != '\0')
+    i = 0;
+    while (s[i] != '\0')
     {
-        if (*s == find)
-            return ((char *)s);
+        if (s[i] == find)
+            return ((char *)s + i);
+        i++;
     }
+    if (s[i] == find)
+        return ((char *)s + i);
     return (0);
 }
 
 int     main(void)
 {
-    char str1[16] = "abcdefghiGlmnop";
-    char str2[16] = "abcdefghiGlmnop";
-    printf("real...%s\n", strchr(str1, 'd'));
-    printf("myft...%s\n", ft_strchr(str2, 'd'));
+    char str1[16] = "AB";
+    char str2[16] = "AB";
+    printf("real...%s\n", strchr(str1, '\0'));
+    printf("myft...%s\n", ft_strchr(str2, '\0'));
     return (0);
 }
