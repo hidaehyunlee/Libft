@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 13:07:04 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/02 14:39:24 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/04 19:07:00 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 
 int     main(void)
 {
-    char s[] = "";
-    printf("%ld\n", ft_strlen(s));
+    char *s = NULL;
     printf("ft : %s\n", ft_substr(s, 7, 0));
     return (0);
 }
