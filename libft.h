@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 17:19:20 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/02 14:39:31 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/05 02:14:56 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,7 @@ int	    ft_tolower(int c);
 void    *ft_calloc(size_t nmemb, size_t size);
 char    *ft_strdup(const char *str);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
+char    *ft_strtrim(char const *s1, char const *set);
 
 #endif
