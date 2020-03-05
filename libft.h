@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 17:19:20 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/05 02:14:56 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/05 18:05:22 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ char    *ft_strdup(const char *str);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
 char    *ft_strtrim(char const *s1, char const *set);
+char				**ft_split(char const *s, char c);
+char			*ft_itoa(int n);
 
 #endif
