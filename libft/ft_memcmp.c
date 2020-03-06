@@ -6,16 +6,16 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 17:45:56 by daelee            #+#    #+#             */
-/*   Updated: 2020/02/29 11:02:44 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 16:59:02 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_memcmp(const void *b1, const void *b2, size_t n)
+int                 ft_memcmp(const void *b1, const void *b2, size_t n)
 {
-    unsigned char *s1;
-    unsigned char *s2;
+    unsigned char   *s1;
+    unsigned char   *s2;
     size_t i;
 
     if (n == 0)
@@ -30,13 +30,4 @@ int     ft_memcmp(const void *b1, const void *b2, size_t n)
         i++;
     }
     return (s1[i] - s2[i]);
-}
-
-int     main()
-{
-    char str1[] = "029351";
-    char str2[] = "129651";
-    printf("real...%d\n", memcmp(str1, str2, 0));
-    printf("myft...%d\n", ft_memcmp(str1, str2, 0));
-    return 0;
 }

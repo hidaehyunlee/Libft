@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 18:09:07 by leedae            #+#    #+#             */
-/*   Updated: 2020/02/28 13:36:49 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 16:58:01 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,4 @@ void                  *ft_memccpy(void *dest, const void *src, int c, size_t n)
         i++;
     }
     return (0);
-}
-
-int   main(void)
-{
-   size_t   i = 10;
-   int      find = 'G';
-   char   str1[25] = "gwlee@student.42seoul.kr";
-   char   str2[25] = "gwlee@student.42seoul.kr";
-   char   str3[12] = "LeeGwangbok";
-
-   printf("Testcase : %s\n", str1);
-   printf("Origin result : %s\n", memccpy(str1, str3, find, i));
-   printf("Origin result2 : %s\n", str1);
-   printf("Your ft result : %s\n", ft_memccpy(str2, str3, find, i));
-   printf("Your ft result2 : %s\n", str2);
 }

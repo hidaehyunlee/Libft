@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 16:25:11 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/06 16:43:42 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 17:01:28 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,4 @@ void    ft_putnbr_fd(int n, int fd)
 		n *= -1;
 	}
 	display_nbr(n, fd);
-}
-
-int main()
-{
-    int n = -2147483648;
-    ft_putnbr_fd(n, 1);
-    return 0;
 }

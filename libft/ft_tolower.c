@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 19:25:40 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/01 19:27:52 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 17:06:50 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,4 @@ int	    ft_tolower(int c)
 	if (ft_isupper(c))
 		return (c + 32);
 	return (c);
-}
-
-int     main()
-{
-    printf("%c\n", ft_tolower('r'));
-    return (0);
 }

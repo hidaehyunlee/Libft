@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 20:47:41 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/02 14:01:22 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 17:03:48 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,4 @@ size_t      ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	}
 	dest[i] = '\0';
 	return (src_len);
-}
-
-int     main()
-{
-    char dest[] = "xxxxxxxxxx";
-    const char str[] = "0123456789";
-    printf("%ld...%s\n", ft_strlcpy(dest, str, 8), dest);
-    return 0;
 }

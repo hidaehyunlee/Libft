@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 12:38:12 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/05 17:30:30 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 17:01:59 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,18 +98,4 @@ char				**ft_split(char const *s, char c)
 	}
 	tab[i] = NULL;
 	return (tab);
-}
-
-int				main(void)
-{
-	char	**tab;
-	unsigned int	i;
-
-	i = 0;
-	tab = ft_split("sdsdsdasd", ' ');
-	while (tab[i] != NULL)
-	{
-		printf("%s\n", tab[i]);
-		i++;
-	}
 }

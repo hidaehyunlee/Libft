@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 17:51:44 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/05 19:45:55 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 16:57:26 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,4 @@ char			*ft_itoa(int n)
 	if (sign == -1)
 		c[0] = '-';
 	return (c);
-}
-
-int     main(void)
-{
-    int n = 456;
-    printf("answer : %s\n", ft_itoa(n));
-    return (0);
 }

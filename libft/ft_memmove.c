@@ -6,15 +6,15 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 12:19:43 by daelee            #+#    #+#             */
-/*   Updated: 2020/02/29 00:09:38 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 17:00:33 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void                    *ft_memmove(void *dest, const void *src, size_t n)
 {
-    unsigned char *new_dest;
+    unsigned char       *new_dest;
     const unsigned char *new_src;
 
     if (dest <= src)
@@ -32,11 +32,4 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
             *new_dest-- = *new_src--;
     }
     return (dest);
-}
-
-int main() {
-  char str[] = "0123456789";
-  ft_memmove(str + 4, str + 2, 6);
-  puts(str);
-  return 0;
 }

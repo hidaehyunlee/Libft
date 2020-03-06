@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 14:08:11 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/01 14:47:29 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 16:53:25 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,4 @@ int     ft_atoi(const char *str)
         i++;
     }
     return (sign * nbr);
-}
-
-int     main()
-{
-    const char str[] = "    012345";
-    printf("myft...%d\n", ft_atoi(str));
-    return (0);
 }

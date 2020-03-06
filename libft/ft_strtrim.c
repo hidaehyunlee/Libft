@@ -6,16 +6,16 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 20:52:40 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/05 02:17:03 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 17:06:11 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_getstart(const char *s1, const char *set)
+int         ft_getstart(const char *s1, const char *set)
 {
-    int i;
-    char *temp;
+    int     i;
+    char    *temp;
 
     i = 0;
     while (s1[i])
@@ -27,9 +27,9 @@ int     ft_getstart(const char *s1, const char *set)
     return (i);
 }
 
-int     ft_getend(const char *s1, const char *set)
+int         ft_getend(const char *s1, const char *set)
 {
-    int len;
+    int     len;
 
     len = ft_strlen(s1);
     while (len)
@@ -41,11 +41,11 @@ int     ft_getend(const char *s1, const char *set)
     return (len);
 }
 
-char    *ft_strtrim(char const *s1, char const *set)
+char        *ft_strtrim(char const *s1, char const *set)
 { 
-    int start;
-    int end;
-    char *newstr;
+    int     start;
+    int     end;
+    char    *newstr;
 
     if (!s1)
         return (ft_strdup(""));
@@ -56,19 +56,4 @@ char    *ft_strtrim(char const *s1, char const *set)
         return (NULL);
     ft_strlcpy(newstr, s1 + start, end - start + 1);
     return(newstr);
-}
-
-int     main()
-{
-    char *s1 = "  ABCCBA  "; 
-    char *set1 = "";
-    //résultat : "ABCCBA";
-    char *s2 = "ACCBACBA"; 
-    char *set2 = "AB";
-    //résultat : "CCBAC";
-    char *s3 = "Hello World!";  
-    char *set3 = "Hlde";
-    //résultat : "o World!"
-    printf("1..%s\n2..%s\n3..%s\n", ft_strtrim(s1, set1), ft_strtrim(s2, set2), ft_strtrim(s3, set3));
-    return (0);
 }

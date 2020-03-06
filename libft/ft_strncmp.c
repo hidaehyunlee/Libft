@@ -6,15 +6,15 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 10:59:12 by daelee            #+#    #+#             */
-/*   Updated: 2020/02/29 11:15:58 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/06 17:04:58 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_strncmp(const char *s1, const char *s2, size_t n)
+int         ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    size_t i;
+    size_t  i;
 
     if (n == 0)
         return (0);
@@ -27,13 +27,4 @@ int     ft_strncmp(const char *s1, const char *s2, size_t n)
         i++;
     }
     return (s1[i] - s2[i]);
-}
-
-int     main()
-{
-    char str1[] = "abcdaaa";
-    char str2[] = "abcdaazz";
-    printf("real...%d\n", strncmp(str1, str2, 6));
-    printf("myft...%d\n", ft_strncmp(str1, str2, 6));
-    return 0;
 }
