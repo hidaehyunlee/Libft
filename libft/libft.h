@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 17:19:20 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/06 17:09:04 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/07 00:23:23 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <linux/fs.h>
+
+typedef struct	    s_list
+{
+	void		    *content;
+	struct s_list	*next;
+}		            t_list;
+
 
 void	    *ft_memset(void *dest, int c, size_t n);
 void	    ft_bzero(void *b, size_t n);
