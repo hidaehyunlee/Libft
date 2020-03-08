@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 17:19:20 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/08 14:28:47 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/08 23:12:56 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ void        ft_lstadd_front(t_list **lst, t_list *new);
 int         ft_lstsize(t_list *lst);
 t_list      ft_lstlast(t_list *lst);
 void        ft_lstadd_back(t_list **lst, t_list *new);
+void        ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif
