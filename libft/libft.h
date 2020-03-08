@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 17:19:20 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/07 00:23:23 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/08 12:58:09 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,8 @@ void        ft_putchar_fd(char c, int fd);
 void        ft_putstr_fd(char *s, int fd);
 void        ft_putendl_fd(char *s, int fd);
 void        ft_putnbr_fd(int n, int fd);
+t_list      *ft_lstnew(void *content);
+void        ft_lstadd_front(t_list **lst, t_list *new);
+int     ft_lstsize(t_list *lst);
 
 #endif
