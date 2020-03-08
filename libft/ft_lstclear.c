@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 23:13:10 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/08 23:54:21 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/09 00:04:07 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void        ft_lstclear(t_list **lst, void (*del)(void *))
     t_list  *next;
 
     curr = *lst;
-    while (lst)
+    while (curr)
     {
         next = curr->next;
         ft_lstdelone(curr, del);
