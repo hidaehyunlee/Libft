@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 20:52:40 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/09 20:41:28 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/10 02:40:28 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int         ft_getend(const char *s1, const char *set)
             break ;
         i++;
     }
-    return (len);
+    return (len - i);
 }
 
 char        *ft_strtrim(char const *s1, char const *set)
