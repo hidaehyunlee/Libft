@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 13:36:53 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/10 00:06:26 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/10 03:06:32 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void                *ft_memchr(const void *b, int c, size_t n)
     unsigned char   find;
 
     new_b = (unsigned char *)b;
-    find = c;
+    find = (unsigned char)c;
     i = 0;
     while (i < n)
     {

@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 20:52:40 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/10 02:40:28 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/10 03:02:53 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ char        *ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(s1));
     start = ft_getstart(s1, set);
     end = ft_getend(s1, set);
+    if (start >= end)
+        return (ft_strdup(""));
     newstr = (char *)malloc(sizeof(char) * (end - start + 1) + 1);
     if (newstr == NULL)
         return (NULL);
