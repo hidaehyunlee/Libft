@@ -6,28 +6,32 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 10:59:12 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/09 20:21:26 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/10 00:46:43 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int         ft_strncmp(const char *s1, const char *s2, size_t n)
+int                 ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    size_t  i;
+    size_t          i;
+    unsigned char   *b1;
+    unsigned char   *b2;
 
-    if (s1 == 0 && s2 == 0)
+    b1 = (unsigned char *)s1;
+    b2 = (unsigned char *)s2;
+    if (b1 == 0 && b2 == 0)
 		return (0);
-	else if (s1 == 0 || s2 == 0)
-		return (s1 == 0 ? -1 : 1);
+	else if (b1 == 0 || b2 == 0)
+		return (b1 == 0 ? -1 : 1);
     if (n == 0)
         return (0);
     i = 0;
-    while ((s1[i] != '\0') && (s2[i] != '\0') && i < (n - 1))
+    while ((b1[i] != '\0') && (b2[i] != '\0') && i < (n - 1))
     {
-        if (s1[i] != s2[i])
-            return (s1[i] - s2[i]);
+        if (b1[i] != b2[i])
+            break ;
         i++;
     }
-    return (0);
+    return (b1[i] - b2[i]);
 }
