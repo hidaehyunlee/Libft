@@ -6,13 +6,13 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 00:14:56 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/09 01:20:05 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/09 20:38:51 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list      *ft_lstmap(t_list *lst, void *(*f)(void), void (*del)(void *))
+t_list      *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
     t_list  *new_head;
     t_list  *new_next;

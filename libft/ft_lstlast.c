@@ -6,13 +6,13 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 13:06:37 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/08 13:32:34 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/09 19:12:08 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list      ft_lstlast(t_list *lst)
+t_list      *ft_lstlast(t_list *lst)
 {
         if (lst == NULL)
                 return (NULL);

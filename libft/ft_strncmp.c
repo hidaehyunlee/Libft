@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 10:59:12 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/06 17:04:58 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/09 20:21:26 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ int         ft_strncmp(const char *s1, const char *s2, size_t n)
 {
     size_t  i;
 
+    if (s1 == 0 && s2 == 0)
+		return (0);
+	else if (s1 == 0 || s2 == 0)
+		return (s1 == 0 ? -1 : 1);
     if (n == 0)
         return (0);
     i = 0;
     while ((s1[i] != '\0') && (s2[i] != '\0') && i < (n - 1))
     {
-        printf("%ld...%ld\n", n, i);
         if (s1[i] != s2[i])
-            break ; 
+            return (s1[i] - s2[i]);
         i++;
     }
-    return (s1[i] - s2[i]);
+    return (0);
 }

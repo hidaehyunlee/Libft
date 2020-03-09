@@ -6,11 +6,11 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 23:13:10 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/09 00:04:07 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/09 19:13:47 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
 void        ft_lstclear(t_list **lst, void (*del)(void *))
 {

@@ -1,6 +1,9 @@
 # Files
 test_main.c
 
+#Folders
+Libftest/
+
 *.DS_Store
 
 # Prerequisites

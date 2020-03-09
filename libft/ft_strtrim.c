@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 20:52:40 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/06 17:06:11 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/09 20:41:28 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 int         ft_getstart(const char *s1, const char *set)
 {
-    int     i;
-    char    *temp;
+    size_t  len;
+    size_t  i;
 
+    len = ft_strlen(s1);
     i = 0;
-    while (s1[i])
+    while (i < len)
     {
         if (ft_strchr(set, s1[i]) == 0)
             break ;
@@ -29,14 +30,16 @@ int         ft_getstart(const char *s1, const char *set)
 
 int         ft_getend(const char *s1, const char *set)
 {
-    int     len;
+    size_t  len;
+    size_t  i;
 
     len = ft_strlen(s1);
-    while (len)
+    i = 0;
+    while (i < len)
     {
-        if (ft_strchr(set, s1[len - 1]) == 0)
+        if (ft_strchr(set, s1[len - i - 1]) == 0)
             break ;
-        len--;
+        i++;
     }
     return (len);
 }
@@ -47,8 +50,10 @@ char        *ft_strtrim(char const *s1, char const *set)
     int     end;
     char    *newstr;
 
-    if (!s1)
-        return (ft_strdup(""));
+    if (s1 == NULL)
+		return (NULL);
+	if (set == NULL)
+		return (ft_strdup(s1));
     start = ft_getstart(s1, set);
     end = ft_getend(s1, set);
     newstr = (char *)malloc(sizeof(char) * (end - start + 1) + 1);
