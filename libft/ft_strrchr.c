@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 22:33:22 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/09 19:50:47 by daelee           ###   ########.fr       */
+/*   Updated: 2020/03/10 02:14:04 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,20 @@
 
 char            *ft_strrchr(const char *s, int c)
 {
-    const char  *last;
+    char        *last;
     char        find;
-
-    last = NULL;
+    size_t      i;
+    
+    last = (char *)s;
     find = (char)c;
-    while (*s++ != '\0')
+    i = ft_strlen(s);
+    while (i > 0)
     {
-        if (*s == find)
-            last = s;
+        if (last[i] == find)
+            return (last + i);
+        i--;
     }
-    return ((char *)last);
+    if (last[i] == find)
+        return (last);
+    return (0);
 }
