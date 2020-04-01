@@ -6,13 +6,13 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 22:01:07 by daelee            #+#    #+#             */
-/*   Updated: 2020/04/01 21:35:14 by daelee           ###   ########.fr       */
+/*   Updated: 2020/04/01 21:47:43 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char        *ft_strchr(char *s, int c)
+char        *ft_strchr(const char *s, int c)
 {
     char    find;
     int     i;
