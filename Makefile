@@ -6,14 +6,16 @@
 #    By: daelee <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2020/03/09 18:31:10 by daelee           ###   ########.fr        #
+#    Updated: 2020/04/07 20:23:48 by daelee           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = libft.a
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-
-NAME = libft.a
+AR = ar rcs
+RM = rm -f
 
 FILES = ft_memset \
 		ft_bzero \
@@ -69,23 +71,22 @@ OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
 
-$(OBJS_DIR)%.o: $(SRCS_DIR)%.c
-	@mkdir -p $(OBJS_DIR)
+.c.o: $(SRCS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS)
-	ar rcs $@ $^ 
+	$(AR) $@ $^ 
 
 bonus: $(OBJS_B)
-	ar rcs $(NAME) $^
+	$(AR) $@ $^
 
 all: $(NAME)
 
 clean:
-	rm -f $(OBJS) $(OBJS_B)
+	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: clean all
 
