@@ -6,18 +6,18 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 17:51:44 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/06 16:57:26 by daelee           ###   ########.fr       */
+/*   Updated: 2020/04/08 20:00:22 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long int		ft_abs(long int nbr)
+long int	ft_abs(long int nbr)
 {
 	return ((nbr < 0) ? -nbr : nbr);
 }
 
-int				ft_len(long int nbr)
+int			ft_len(long int nbr)
 {
 	int		len;
 
@@ -30,11 +30,11 @@ int				ft_len(long int nbr)
 	return (len);
 }
 
-char			*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	int			len;
-	int			sign;
-	char		*c;
+	int		len;
+	int		sign;
+	char	*c;
 
 	sign = (n < 0) ? -1 : 1;
 	len = ft_len(n);
