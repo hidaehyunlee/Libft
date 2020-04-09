@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 10:59:12 by daelee            #+#    #+#             */
-/*   Updated: 2020/04/09 11:22:05 by daelee           ###   ########.fr       */
+/*   Updated: 2020/04/09 17:37:22 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,6 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	b1 = (unsigned char *)s1;
 	b2 = (unsigned char *)s2;
-	if (b1 == 0 && b2 == 0)
-		return (0);
-	else if (b1 == 0 || b2 == 0)
-		return (b1 == 0 ? -1 : 1);
-	if (n == 0)
-		return (0);
 	i = 0;
 	while ((b1[i] != '\0') && (b2[i] != '\0') && i < (n - 1))
 	{
