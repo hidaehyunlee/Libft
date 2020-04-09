@@ -6,18 +6,18 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 19:25:40 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/06 17:06:50 by daelee           ###   ########.fr       */
+/*   Updated: 2020/04/09 11:42:01 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isupper(int c)
+int		ft_isupper(int c)
 {
-    return((65 <= c) && (90 >= c));
+	return ((65 <= c) && (90 >= c));
 }
 
-int	    ft_tolower(int c)
+int		ft_tolower(int c)
 {
 	if (ft_isupper(c))
 		return (c + 32);

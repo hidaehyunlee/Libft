@@ -6,15 +6,15 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 20:47:41 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/06 17:03:48 by daelee           ###   ########.fr       */
+/*   Updated: 2020/04/09 11:02:40 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t      ft_strlcpy(char *dest, const char *src, size_t dstsize)
+size_t		ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
-    size_t	src_len;
+	size_t	src_len;
 	size_t	i;
 
 	src_len = 0;

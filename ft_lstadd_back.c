@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 13:24:41 by daelee            #+#    #+#             */
-/*   Updated: 2020/04/08 20:08:26 by daelee           ###   ########.fr       */
+/*   Updated: 2020/04/09 10:23:39 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list 	*last;
+	t_list	*last;
 
 	if (lst == NULL || new == NULL)
 		return ;

@@ -6,15 +6,15 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 21:04:42 by daelee            #+#    #+#             */
-/*   Updated: 2020/03/06 17:03:29 by daelee           ###   ########.fr       */
+/*   Updated: 2020/04/09 11:02:30 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t      ft_strlcat(char *dest, const char *src, size_t dstsize)
+size_t		ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-    size_t	i;
+	size_t	i;
 	size_t	dest_len;
 	size_t	src_len;
 

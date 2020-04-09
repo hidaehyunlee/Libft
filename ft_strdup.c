@@ -6,17 +6,17 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 21:41:43 by daelee            #+#    #+#             */
-/*   Updated: 2020/04/08 19:52:07 by daelee           ###   ########.fr       */
+/*   Updated: 2020/04/09 11:01:35 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char        *ft_strdup(const char *str)
+char		*ft_strdup(const char *str)
 {
-	int     i;
-	int     len;
-	char    *new_str;
+	int		i;
+	int		len;
+	char	*new_str;
 
 	len = 0;
 	while (str[len])
