@@ -3,6 +3,7 @@ test_main.c
 
 #Folders
 Libftest/
+libft-war-machine/
 
 *.DS_Store
 

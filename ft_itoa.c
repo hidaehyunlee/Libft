@@ -6,7 +6,7 @@
 /*   By: daelee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 17:51:44 by daelee            #+#    #+#             */
-/*   Updated: 2020/04/08 20:00:22 by daelee           ###   ########.fr       */
+/*   Updated: 2020/04/10 11:29:48 by daelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ char		*ft_itoa(int n)
 	sign = (n < 0) ? -1 : 1;
 	len = ft_len(n);
 	c = (char *)malloc(sizeof(char) * len + 1);
+	if (c == NULL)
+		return (0);
 	c[len] = '\0';
 	len--;
 	while (len >= 0)
