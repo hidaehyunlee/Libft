@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: daelee <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2020/04/09 11:28:52 by daelee           ###   ########.fr        #
+#    Updated: 2021/01/03 12:23:27 by daelee           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,10 @@ FILES = ft_memset \
 		ft_putchar_fd \
 		ft_putstr_fd \
 		ft_putendl_fd \
-		ft_putnbr_fd
+		ft_putnbr_fd \
+		ft_strtok \
+		ft_strcmp \
+		get_next_line \
 
 FILES_B = 	ft_lstnew \
 	  		ft_lstadd_front \
